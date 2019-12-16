@@ -7,12 +7,22 @@
 //
 
 #import "JCAppDelegate.h"
+#import "JCViewController.h"
+#import "JCRouter.h"
 
 @implementation JCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    JCViewController *vc = [JCViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -41,6 +51,17 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - openApp
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    NSLog(@" JC ------> url:%@ \n option:%@", url, options);
+    
+    // 使用JCRouter处理
+    [JCRouter openURL:url arg:nil error:nil completion:nil];
+    
+    return YES;
 }
 
 @end

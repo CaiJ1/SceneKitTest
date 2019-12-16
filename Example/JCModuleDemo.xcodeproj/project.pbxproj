@@ -38,9 +38,10 @@
 
 /* Begin PBXFileReference section */
 		151DABC31C98FEF6016B66A3 /* Pods-JCModuleDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCModuleDemo_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCModuleDemo_Example/Pods-JCModuleDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1923DCDE23A3BE57000D99AC /* JCModuleDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JCModuleDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		252F7FAB6928A608606143DB /* Pods_JCModuleDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCModuleDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46E3C0A2EF80D91C4934593D /* JCModuleDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JCModuleDemo.podspec; path = ../JCModuleDemo.podspec; sourceTree = "<group>"; };
-		4D76065025ED221BD6F69C6E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		46E3C0A2EF80D91C4934593D /* JCModuleDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JCModuleDemo.podspec; path = ../JCModuleDemo.podspec; sourceTree = "<group>"; };
+		4D76065025ED221BD6F69C6E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4F06A09694F0429E641DB23A /* Pods-JCModuleDemo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCModuleDemo_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCModuleDemo_Example/Pods-JCModuleDemo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JCModuleDemo_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCModuleDemo_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,7 +66,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3E37AAB465C9D31E375A6D4 /* Pods-JCModuleDemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCModuleDemo_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCModuleDemo_Tests/Pods-JCModuleDemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E8527AB7A76C8F205641C737 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E8527AB7A76C8F205641C737 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ED09932B83EE658812CF9139 /* Pods_JCModuleDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCModuleDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +131,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1923DCDE23A3BE57000D99AC /* JCModuleDemo.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -250,6 +252,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = jiacai;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = MWX7M7ABA2;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -260,6 +266,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -387,11 +394,14 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JCModuleDemo_Tests/Pods-JCModuleDemo_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -557,12 +567,15 @@
 			baseConfigurationReference = 151DABC31C98FEF6016B66A3 /* Pods-JCModuleDemo_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MWX7M7ABA2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCModuleDemo/JCModuleDemo-Prefix.pch";
 				INFOPLIST_FILE = "JCModuleDemo/JCModuleDemo-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.jc.jc.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = ARVR_Dev;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -573,12 +586,15 @@
 			baseConfigurationReference = 4F06A09694F0429E641DB23A /* Pods-JCModuleDemo_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MWX7M7ABA2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCModuleDemo/JCModuleDemo-Prefix.pch";
 				INFOPLIST_FILE = "JCModuleDemo/JCModuleDemo-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.jc.jc.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = ARVR_Dev;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

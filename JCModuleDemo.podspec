@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'JCModuleDemo/Classes/**/*'
+  s.source_files = "JCModuleDemo/Classes/**/*", "JCModuleDemo/Classes/**/*.{h,hpp,m,mm,cpp}"
   
   # s.resource_bundles = {
   #   'JCModuleDemo' => ['JCModuleDemo/Assets/*.png']
@@ -39,4 +39,11 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  ## 仅修改模块工程
+  s.pod_target_xcconfig = {
+  #    'OTHER_LDFLAGS' => '-undefined dynamic_lookup',
+  #    'ENABLE_BITCODE' => 'NO',
+      'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_TARGET_SRCROOT)/**"'
+  }
 end

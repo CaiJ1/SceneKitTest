@@ -1,0 +1,28 @@
+{
+  "name": "JCModuleDemo",
+  "version": "0.1.0",
+  "summary": "A short description of JCModuleDemo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jiacai/JCModuleDemo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jiacai": "jiacai@jd.com"
+  },
+  "source": {
+    "git": "https://github.com/jiacai/JCModuleDemo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "JCModuleDemo/Classes/**/*",
+    "JCModuleDemo/Classes/**/*.{h,hpp,m,mm,cpp}"
+  ],
+  "pod_target_xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/**\""
+  }
+}

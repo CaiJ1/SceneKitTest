@@ -8,6 +8,8 @@ target 'JCModuleDemo_Example' do
   target 'JCModuleDemo_Tests' do
     inherit! :search_paths
 
+    pod 'Masonry' 
     
   end
 end
+

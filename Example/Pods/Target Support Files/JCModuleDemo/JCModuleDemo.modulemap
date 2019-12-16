@@ -1,0 +1,6 @@
+framework module JCModuleDemo {
+  umbrella header "JCModuleDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
