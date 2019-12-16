@@ -40,7 +40,9 @@
 //    JCRouter *r = [[JCRouter alloc] init];
     
     NSString *url = @"openApp.JCModule://JCARKitViewController/exportInterface?mod=forumdisplay&fid=153";
-    [JCRouter openURL:url arg:nil error:nil completion:nil];
+    UIViewController *controller = [JCRouter openURL:url arg:nil error:nil completion:nil];
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - getter setter

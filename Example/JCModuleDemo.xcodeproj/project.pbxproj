@@ -572,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCModuleDemo/JCModuleDemo-Prefix.pch";
 				INFOPLIST_FILE = "JCModuleDemo/JCModuleDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.jc.jc.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -591,6 +592,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCModuleDemo/JCModuleDemo-Prefix.pch";
 				INFOPLIST_FILE = "JCModuleDemo/JCModuleDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.jc.jc.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
