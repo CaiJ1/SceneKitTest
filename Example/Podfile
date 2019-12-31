@@ -5,11 +5,6 @@ platform :ios, '8.0'
 target 'JCModuleDemo_Example' do
   pod 'JCModuleDemo', :path => '../'
 
-  target 'JCModuleDemo_Tests' do
-    inherit! :search_paths
-
-    pod 'Masonry' 
-    
-  end
+  pod 'Masonry' 
 end
 

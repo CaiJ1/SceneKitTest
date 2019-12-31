@@ -23,6 +23,8 @@
     "JCModuleDemo/Classes/**/*.{h,hpp,m,mm,cpp}"
   ],
   "pod_target_xcconfig": {
-    "FRAMEWORK_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/**\""
+    "ENABLE_BITCODE": "NO",
+    "FRAMEWORK_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/**\"",
+    "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/../../**\""
   }
 }

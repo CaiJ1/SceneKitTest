@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "JCPlaneNode.h"
 #import "JCRouter.h"
+#import "JCUtils.h"
 #import "JCARKitViewController.h"
 
 FOUNDATION_EXPORT double JCModuleDemoVersionNumber;
