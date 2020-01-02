@@ -71,7 +71,7 @@ JCRouter_Extern_Methon(JCARKitViewController, exportInterface, arg, callback) {
 
 #pragma mark - public function
 - (void)startArSession {
-    [self.arSession runWithConfiguration:self.arConfig];
+    [self.arSession runWithConfiguration:self.arConfig options:ARSessionRunOptionResetTracking | ARSessionRunOptionRemoveExistingAnchors];
 }
 - (void)stopArSession {
     [self.arSession pause];
@@ -85,14 +85,14 @@ JCRouter_Extern_Methon(JCARKitViewController, exportInterface, arg, callback) {
         _arView = [[ARSCNView alloc] init];
         _arView.backgroundColor = UIColor.whiteColor;
         
-        _arView.showsStatistics = YES;
-        _arView.autoenablesDefaultLighting = YES;
-        _arView.allowsCameraControl = YES;
-        _arView.rendersContinuously = YES;
+//        _arView.showsStatistics = YES;
+//        _arView.autoenablesDefaultLighting = YES;
+//        _arView.allowsCameraControl = YES;
+//        _arView.rendersContinuously = YES;
         _arView.debugOptions = ARSCNDebugOptionShowFeaturePoints | ARSCNDebugOptionShowWorldOrigin;
         
-        SCNScene *scene = [[SCNScene alloc] init];
-        _arView.scene = scene;
+//        SCNScene *scene = [[SCNScene alloc] init];
+//        _arView.scene = scene;
     }
     return _arView;
 }

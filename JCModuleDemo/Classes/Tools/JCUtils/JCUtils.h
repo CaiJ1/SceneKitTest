@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface JCUtils : NSObject
+typedef struct _JCUtils_t {
+    float (*cpu_usage)(void);
+    float (*cpu_usage2)(void);
+    
+} JCUtils_s;
 
-@end
-
-NS_ASSUME_NONNULL_END
+// 常用工具包， 设备信息、时间、MD5、Base64、Color、内存信息等
+extern JCUtils_s JCUtils;

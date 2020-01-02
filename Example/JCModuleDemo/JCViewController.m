@@ -21,11 +21,11 @@ struct JCModuleModel {
 };
 typedef struct JCModuleModel JCModuleModel;
 
-static inline JCModuleModel JCModuleModelMake(NSString *showName, NSString *class, NSString *interface) {
+static inline JCModuleModel JCModuleModelMake(const char *showName, const char *class, const char *interface) {
     JCModuleModel model;
-    model.showName = showName.UTF8String;
-    model.className = class.UTF8String;
-    model.interfaceName = interface.UTF8String;
+    model.showName = showName;
+    model.className = class;
+    model.interfaceName = interface;
     model.valid = YES;
     return model;
 }
@@ -80,9 +80,9 @@ static inline JCModuleModel JCModuleModelMake(NSString *showName, NSString *clas
 }
 
 - (void)initData {
-    JCModuleModel armodel = JCModuleModelMake(@"ARKit官方Demo-改",
-                                              @"JCARKitViewController",
-                                              @"exportInterface");
+    JCModuleModel armodel = JCModuleModelMake("ARKit官方Demo-改",
+                                              "JCARKitViewController",
+                                              "exportInterface");
     [self addModuleDataToArray:armodel];
 
 }
@@ -172,7 +172,7 @@ static inline JCModuleModel JCModuleModelMake(NSString *showName, NSString *clas
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.showsHorizontalScrollIndicator = NO;
-        [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         

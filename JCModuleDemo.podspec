@@ -40,10 +40,14 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   
-  ## 仅修改模块工程
+  ## 仅修改pod模块工程
   s.pod_target_xcconfig = {
+  ## 修改应用framework 的工程
+  #s.xcconfig = {
   #    'OTHER_LDFLAGS' => '-undefined dynamic_lookup',
-  #    'ENABLE_BITCODE' => 'NO',
-      'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_TARGET_SRCROOT)/**"'
+  #    'OTHER_LDFLAGS' => '-framework Masonry',
+      'ENABLE_BITCODE' => 'NO',
+      'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_TARGET_SRCROOT)/**"',
+      'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/../../**"'
   }
 end
