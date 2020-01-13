@@ -57,6 +57,7 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
     
     [self initSceneView];
     [self initARSession];
+    [self initGesture];
     
     [self loadDiceModels];
 }
@@ -76,7 +77,7 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
 
 #pragma mark - private function
 - (void)initData {
-    self.diceCount = 5;
+    self.diceCount = 1;
     self.diceStyle = 0;
     self.diceOffset = @[[NSValue valueWithSCNVector3:SCNVector3Make(0.0,0.0,0.0)],
                         [NSValue valueWithSCNVector3:SCNVector3Make(-0.05, 0.00, 0.0)],
@@ -109,6 +110,12 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
     [self startSession];
 }
 
+- (void)initGesture {
+    UISwipeGestureRecognizer *swip = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(sceneViewDidSwipeUp:)];
+    swip.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.sceneView addGestureRecognizer:swip];
+}
+
 - (void)loadDiceModels {
     SCNScene *diceScene = [SCNScene sceneNamed:@"ARResource.scnassets/DiceScene.scn"];
     for (int i = 0; i < 5; i++) {
@@ -127,9 +134,9 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
 - (void)throwDiceNode:(SCNMatrix4)transform andOffset:(SCNVector3)offset {
     CGFloat distance = simd_distance(self.focusNode.simdPosition, simd_make_float3(transform.m41, transform.m42, transform.m43));
     SCNVector3 direction = SCNVector3Make(-(distance * 2.5) * transform.m31, -(distance * 2.5)* (transform.m32 - M_PI_4), -(distance * 2.5) * transform.m33);
-    SCNVector3 rotation = SCNVector3Make(arc4random()%314 / 100.f, arc4random()%314 / 100.f, arc4random()%314 / 100.f);
+    SCNVector3 rotation = SCNVector3Make(arc4random()%100 / 100.f, arc4random()%100 / 100.f, arc4random()%100 / 100.f);
     SCNVector3 position = SCNVector3Make(transform.m41 + offset.x, transform.m42 + offset.y, transform.m43 + offset.z);
-    SCNNode *diceNode = self.dicesNodes[self.diceStyle];
+    SCNNode *diceNode = [self.dicesNodes[self.diceStyle] clone];
     
     diceNode.name = @"dice";
     diceNode.position = position;
@@ -172,12 +179,12 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
     SCNPlane *plane = [SCNPlane planeWithWidth:planeAnchor.extent.x height:planeAnchor.extent.z];
     
     SCNMaterial *material = [SCNMaterial material];
-    material.diffuse.contents = @"ARResource.scnassets/Textures/Surface_diffuse.png";
+    material.diffuse.contents = color;// @"ARResource.scnassets/Textures/Surface_diffuse.png"; // color;
     plane.materials = @[material];
     
     SCNNode *pNode = [SCNNode nodeWithGeometry:plane];
     pNode.position = SCNVector3Make(planeAnchor.center.x, 0, planeAnchor.center.z);
-    pNode.transform = SCNMatrix4MakeRotation(M_PI / 2.f, 1, 0, 0);
+    pNode.transform = SCNMatrix4MakeRotation(-M_PI / 2.f, 1, 0, 0);
     
     pNode.physicsBody = [self createARPlanePhysics:plane];
     return pNode;
@@ -222,7 +229,7 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
     [self.sceneView.session runWithConfiguration:config];
 }
 
-- (void)hideARPlaneNOdes {
+- (void)hideARPlaneNodes {
     for (ARAnchor *anchor in self.sceneView.session.currentFrame.anchors) {
         SCNNode *node = [self.sceneView nodeForAnchor:anchor];
         for (SCNNode *child in node.childNodes) {
@@ -247,7 +254,7 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
     dispatch_async(dispatch_get_main_queue(), ^{
         [self suspendARPlaneDetection];
         
-        [self hideARPlaneNOdes];
+        [self hideARPlaneNodes];
         self.gameState = GameStatePointToSurface;
     });
 }
@@ -283,6 +290,20 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
         }
     });
 }
+- (void)sceneViewDidSwipeUp:(UISwipeGestureRecognizer *)swip {
+    if (self.gameState != GameStateSwipeToPlay) {
+        return;
+    }
+    ARFrame *frame = self.sceneView.session.currentFrame;
+    if (!frame) {
+        return;
+    }
+    
+    for (int i = 0; i < self.diceCount; i++) {
+        [self throwDiceNode:SCNMatrix4FromMat4(frame.camera.transform) andOffset:[self.diceOffset[i] SCNVector3Value]];
+    }
+    
+}
 
 #pragma mark - getter setter
 - (ARSCNView *)sceneView {
@@ -305,26 +326,26 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
 #pragma mark - delegate
 #pragma mark ARSCNViewDelegate
 - (void)renderer:(id<SCNSceneRenderer>)renderer updateAtTime:(NSTimeInterval)time {
-    dispatch_async(dispatch_get_main_queue(), ^{
+//    dispatch_async(dispatch_get_main_queue(), ^{
         [self updateStatus];
         [self updateFocusNode];
         [self updateDiceNodes];
-    });
+//    });
 }
 
 - (void)renderer:(id<SCNSceneRenderer>)renderer didAddNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor {
     if ([anchor isKindOfClass:[ARPlaneAnchor class]]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
+//        dispatch_async(dispatch_get_main_queue(), ^{
             SCNNode *pNode = [self createARPlaneNode:(ARPlaneAnchor *)anchor andColor:UIColor.yellowColor];
             [node addChildNode:pNode];
-        });
+//        });
     }
 }
 - (void)renderer:(id<SCNSceneRenderer>)renderer didUpdateNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor {
     if ([anchor isKindOfClass:[ARPlaneAnchor class]]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self updateARPlaneNode:node andPlaneAchor:(ARPlaneAnchor *)anchor];
-        });
+//        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateARPlaneNode:node.childNodes.firstObject andPlaneAchor:(ARPlaneAnchor *)anchor];
+//        });
     }
 }
 - (void)renderer:(id<SCNSceneRenderer>)renderer didRemoveNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor {
