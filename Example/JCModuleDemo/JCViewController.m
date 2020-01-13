@@ -80,10 +80,15 @@ static inline JCModuleModel JCModuleModelMake(const char *showName, const char *
 }
 
 - (void)initData {
-    JCModuleModel armodel = JCModuleModelMake("ARKit官方Demo-改",
+    JCModuleModel arModel = JCModuleModelMake("ARKit官方Demo-改",
                                               "JCARKitViewController",
-                                              "exportInterface");
-    [self addModuleDataToArray:armodel];
+                                              "getJCARKitViewController");
+    [self addModuleDataToArray:arModel];
+    
+    JCModuleModel diceModel = JCModuleModelMake("色子游戏",
+                                              "PlayDicesViewController",
+                                              "getPlayDicesViewController");
+    [self addModuleDataToArray:diceModel];
 
 }
 - (void)addModuleDataToArray:(JCModuleModel)model {
