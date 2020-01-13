@@ -31,7 +31,7 @@ JCRouter_Extern_Methon(JCARKitViewController, exportInterface, arg, callback) {
     return nil;
 }
 */
-JCRouter_Extern_Methon(JCARKitViewController, exportInterface, arg, callback) {
+JCRouter_Extern_Methon(JCARKitViewController, getJCARKitViewController, arg, callback) {
     NSLog(@" JC ------> ARKit 调用成功");
     JCARKitViewController *vc = [[JCARKitViewController alloc] init];
     return vc;

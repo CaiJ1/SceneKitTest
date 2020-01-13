@@ -12,6 +12,8 @@
 		0CB26840B2CD2CDB40F8A29A935233E3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 61881F60AB333EA86CE7881063A4BA60 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1046B7E99E763A9478CEDEB621A21C5F /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0A25DD6F58D072A4ACFC92D9237BF /* View+MASAdditions.m */; };
 		1316416628214CB83759F52237B1B0E2 /* JCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BB32018985742C3B0E55A725872EB11E /* JCUtils.m */; };
+		196FC55A23BF41FE0075C454 /* PlayDicesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 196FC55823BF41FE0075C454 /* PlayDicesViewController.h */; };
+		196FC55B23BF41FE0075C454 /* PlayDicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196FC55923BF41FE0075C454 /* PlayDicesViewController.m */; };
 		22F99289DE8104A3FEC6EE78B8099AD8 /* JCPlaneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2C09C9DD65F2FDD873247D783C6134 /* JCPlaneNode.m */; };
 		24AA095821D4A1EE5818A0374DFCD08B /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0183E721D7FD6AF70B4A911C1B1B95 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3469F122175906BE1A0E4E4165ECB8A6 /* JCModuleDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A9A7EADD654400DE9943373F963C5 /* JCModuleDemo-dummy.m */; };
@@ -71,15 +73,17 @@
 
 /* Begin PBXFileReference section */
 		0925CC604B01F156279E8952DDE3EDDB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		0ABA2A56071EAA8D0DCF8B104CCD7004 /* JCModuleDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JCModuleDemo.framework; path = JCModuleDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABA2A56071EAA8D0DCF8B104CCD7004 /* JCModuleDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JCModuleDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F332E4D2EE4C6352C5ECD34AAE1414B /* JCARKitViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JCARKitViewController.h; sourceTree = "<group>"; };
+		196FC55823BF41FE0075C454 /* PlayDicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayDicesViewController.h; path = Dice/PlayDicesViewController.h; sourceTree = "<group>"; };
+		196FC55923BF41FE0075C454 /* PlayDicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PlayDicesViewController.m; path = Dice/PlayDicesViewController.m; sourceTree = "<group>"; };
 		1C0A9A7EADD654400DE9943373F963C5 /* JCModuleDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JCModuleDemo-dummy.m"; sourceTree = "<group>"; };
 		1F0183E721D7FD6AF70B4A911C1B1B95 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		1FB8A9BDAB144F118F7F74E1F2B74097 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		21BE9BC27EDBCB4C15EED3FD67C1440E /* JCPlaneNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JCPlaneNode.h; sourceTree = "<group>"; };
 		249167C795049E4987E992ECE8C279DD /* JCRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JCRouter.h; sourceTree = "<group>"; };
 		264FF471F7008A50788A918F71593369 /* Pods-JCModuleDemo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JCModuleDemo_Example-umbrella.h"; sourceTree = "<group>"; };
-		298A4A8EC8C64D2E7C72DE584AA2340B /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		298A4A8EC8C64D2E7C72DE584AA2340B /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2F69E835336330FF06E7268D32D667C9 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		303B58A2959C8EEE96799AD558DDA1D3 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
@@ -107,11 +111,11 @@
 		818E990F262EC48F8DAAFD014D7E9234 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		8223B4B9D2A5B7C0F33D1BC8949FA9F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845DDAF7EF74706EEFDDDF3A422BF8FD /* Pods-JCModuleDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JCModuleDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96DCAB46CA2931B8140F2639F17404AF /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		986CB32629319F7F2256662716334944 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		A02D339E60E114FCC992372E93245BA1 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		A161FE04C9C29D188078DE967A4B7C6C /* Pods_JCModuleDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JCModuleDemo_Example.framework; path = "Pods-JCModuleDemo_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A161FE04C9C29D188078DE967A4B7C6C /* Pods_JCModuleDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCModuleDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A214B89738295B4A4B00EEB1960E8865 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		AA2C09C9DD65F2FDD873247D783C6134 /* JCPlaneNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JCPlaneNode.m; sourceTree = "<group>"; };
 		AD04C760F0EB4FE7B23D85D56145A97F /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 			children = (
 				0F332E4D2EE4C6352C5ECD34AAE1414B /* JCARKitViewController.h */,
 				70F76A927857373B0C63A826B6DBBB73 /* JCARKitViewController.m */,
+				196FC55823BF41FE0075C454 /* PlayDicesViewController.h */,
+				196FC55923BF41FE0075C454 /* PlayDicesViewController.m */,
 			);
 			name = ViewControllers;
 			path = JCModuleDemo/Classes/ViewControllers;
@@ -254,7 +260,6 @@
 				CD4F4E160A4DC0AAA0AD56E3D97FEE2D /* JCUtils.h */,
 				BB32018985742C3B0E55A725872EB11E /* JCUtils.m */,
 			);
-			name = JCUtils;
 			path = JCUtils;
 			sourceTree = "<group>";
 		};
@@ -296,7 +301,6 @@
 				3980E01C213ECEDEABAC38C1CFD3946D /* ViewController+MASAdditions.m */,
 				D253588BAFB01A953DA60C10CD597F84 /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -392,6 +396,7 @@
 				7E333B3F10D6109FC6261B3712A7C210 /* JCModuleDemo-umbrella.h in Headers */,
 				AA5E47A448D166294C58EB7125159924 /* JCPlaneNode.h in Headers */,
 				7B3566BB04EDD5AFB4C308C42CCF95CC /* JCRouter.h in Headers */,
+				196FC55A23BF41FE0075C454 /* PlayDicesViewController.h in Headers */,
 				78DACA20CF034E03B825B2896A488CFB /* JCUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +482,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -547,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C927311585F3196918EC9945C0ADFFFB /* JCARKitViewController.m in Sources */,
+				196FC55B23BF41FE0075C454 /* PlayDicesViewController.m in Sources */,
 				3469F122175906BE1A0E4E4165ECB8A6 /* JCModuleDemo-dummy.m in Sources */,
 				22F99289DE8104A3FEC6EE78B8099AD8 /* JCPlaneNode.m in Sources */,
 				39F94D2DBF132C9BCC064C97C03D6A77 /* JCRouter.m in Sources */,
@@ -618,7 +625,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JCModuleDemo/JCModuleDemo-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JCModuleDemo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JCModuleDemo/JCModuleDemo.modulemap";
 				PRODUCT_NAME = JCModuleDemo;
@@ -687,8 +694,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -840,7 +846,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JCModuleDemo/JCModuleDemo-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JCModuleDemo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JCModuleDemo/JCModuleDemo.modulemap";
 				PRODUCT_NAME = JCModuleDemo;

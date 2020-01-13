@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196FC55523BF1AE60075C454 /* JCARResource.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 196FC55423BF1AE60075C454 /* JCARResource.scnassets */; };
+		196FC55723BF1FE90075C454 /* 屏幕快照 2020-01-03 下午3.08.12.png in Resources */ = {isa = PBXBuildFile; fileRef = 196FC55623BF1FE90075C454 /* 屏幕快照 2020-01-03 下午3.08.12.png */; };
+		196FC55D23BF47740075C454 /* ARResource.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 196FC55C23BF47740075C454 /* ARResource.scnassets */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		151DABC31C98FEF6016B66A3 /* Pods-JCModuleDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCModuleDemo_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCModuleDemo_Example/Pods-JCModuleDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1923DCDE23A3BE57000D99AC /* JCModuleDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JCModuleDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		196FC55423BF1AE60075C454 /* JCARResource.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = JCARResource.scnassets; sourceTree = "<group>"; };
+		196FC55623BF1FE90075C454 /* 屏幕快照 2020-01-03 下午3.08.12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2020-01-03 下午3.08.12.png"; sourceTree = "<group>"; };
+		196FC55C23BF47740075C454 /* ARResource.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARResource.scnassets; sourceTree = "<group>"; };
 		252F7FAB6928A608606143DB /* Pods_JCModuleDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCModuleDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E3C0A2EF80D91C4934593D /* JCModuleDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JCModuleDemo.podspec; path = ../JCModuleDemo.podspec; sourceTree = "<group>"; };
 		4D76065025ED221BD6F69C6E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 		6003F593195388D20070C39A /* Example for JCModuleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				196FC55623BF1FE90075C454 /* 屏幕快照 2020-01-03 下午3.08.12.png */,
 				6003F59C195388D20070C39A /* JCAppDelegate.h */,
 				6003F59D195388D20070C39A /* JCAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -147,6 +154,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				196FC55423BF1AE60075C454 /* JCARResource.scnassets */,
+				196FC55C23BF47740075C454 /* ARResource.scnassets */,
 			);
 			name = "Example for JCModuleDemo";
 			path = JCModuleDemo;
@@ -278,9 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				196FC55723BF1FE90075C454 /* 屏幕快照 2020-01-03 下午3.08.12.png in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				196FC55D23BF47740075C454 /* ARResource.scnassets in Resources */,
+				196FC55523BF1AE60075C454 /* JCARResource.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
