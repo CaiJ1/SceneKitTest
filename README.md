@@ -22,7 +22,7 @@ pod 'JCModuleDemo'
 
 ## Author
 
-jiacai, jiacai@jd.com
+jiacai, 1127462679@qq.com
 
 ## License
 
