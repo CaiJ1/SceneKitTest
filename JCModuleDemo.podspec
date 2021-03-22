@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/jiacai/JCModuleDemo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jiacai' => 'jiacai@jd.com' }
+  s.author           = { 'jiacai' => '1127462679@qq.com' }
   s.source           = { :git => 'https://github.com/jiacai/JCModuleDemo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

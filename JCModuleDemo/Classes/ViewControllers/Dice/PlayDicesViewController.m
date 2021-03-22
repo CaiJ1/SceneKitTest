@@ -77,7 +77,7 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
 
 #pragma mark - private function
 - (void)initData {
-    self.diceCount = 1;
+    self.diceCount = 3;
     self.diceStyle = 0;
     self.diceOffset = @[[NSValue valueWithSCNVector3:SCNVector3Make(0.0,0.0,0.0)],
                         [NSValue valueWithSCNVector3:SCNVector3Make(-0.05, 0.00, 0.0)],
@@ -123,8 +123,8 @@ JCRouter_Extern_Methon(PlayDicesViewController, getPlayDicesViewController, arg,
         [self.dicesNodes addObject:nodel];
     }
     
-    SCNScene *focusScene = [SCNScene sceneNamed:@"ARResource.scnassets/Models/FocusScene.scn"];
-    self.focusNode = [focusScene.rootNode childNodeWithName:@"focus" recursively:NO];
+    SCNScene *focusScene = [SCNScene sceneNamed:@"ARResource.scnassets/Models/Dice.dae"];
+    self.focusNode = [focusScene.rootNode childNodeWithName:@"Dice" recursively:NO];
     [self.sceneView.scene.rootNode addChildNode:self.focusNode];
     
     self.lightNode = [diceScene.rootNode childNodeWithName:@"directional" recursively:NO];
